@@ -12,17 +12,21 @@ echo "sum of 2 numbers is : $SUM"
 
 echo "sum of 2 numbers is : ${SUM}"
 
-LEADERS=("modi","trump","putin")
+#!/bin/bash
+
+# Declare an array
+LEADERS=("Gandhi" "Nehru" "Patel" "Bose")
+
+# Access array elements
+echo "First leader: ${LEADERS[0]}"
+echo "Second leader: ${LEADERS[1]}"
+echo "Third leader: ${LEADERS[2]}"
+echo "Fourth leader: ${LEADERS[3]}"
+
 
 echo "All leaders: ${LEADERS[@]}"
 
 echo "All leaders: ${LEADERS[*]}"
 
-echo "First leader: ${LEADERS[0]}"
 
-echo "second leader: ${LEADERS[1]}"
-
-echo "third leader: ${LEADERS[2]}"
-
-echo "fourth leader: ${LEADERS[3]}"
 
