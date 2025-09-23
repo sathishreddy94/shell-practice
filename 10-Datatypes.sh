@@ -14,15 +14,15 @@ echo "sum of 2 numbers is : ${SUM}"
 
 LEADERS=("modi","trump","putin")
 
-echo "All leaders: ${LEADERS}[@]"
+echo "All leaders: ${LEADERS[@]}"
 
-echo "All leaders: ${LEADERS}[*]"
+echo "All leaders: ${LEADERS[*]}"
 
-echo "First leader: ${LEADERS}[0]"
+echo "First leader: ${LEADERS[0]}"
 
-echo "second leader: ${LEADERS}[1]"
+echo "second leader: ${LEADERS[1]}"
 
-echo "third leader: ${LEADERS}[2]"
+echo "third leader: ${LEADERS[2]}"
 
-echo "fourth leader: ${LEADERS}[3]"
+echo "fourth leader: ${LEADERS[3]}"
 
