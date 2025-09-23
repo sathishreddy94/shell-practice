@@ -1,0 +1,44 @@
+#!/bin/bash
+
+
+#Steps
+#S1:To check the user has root access or not, if yes then proceed otherwise ask them to run the same with root user
+#S2:install the software
+#S3:check exit status[for root user: id -u will be 0, for normal user there will be some value like 1001], if 0 success/proceed, otherwise Failure/stop
+
+USERID=$(id -u)
+
+if [ $USERID -ne 0 ]; then
+    echo "ERROR:: run this script with root user access/previlige"
+    exit 1 #failure is other than 0
+fi
+
+dnf install mysql -y
+
+if [ $? -ne 0 ]; then
+    echo "ERROR:: installing mysql is FAILURE"
+     exit 2 #failur is other than 0
+else
+ echo "ERROR:: installing mysql is SUCCESS"
+ #here it will automatically consider 0 as exit code
+fi
+
+dnf install nginx -y
+
+if [ $? -ne 0 ]; then
+    echo "ERROR:: installing nginx is FAILURE"
+     exit 2 #failur is other than 0
+else
+ echo "ERROR:: installing nginx is SUCCESS"
+ #here it will automatically consider 0 as exit code
+fi
+
+dnf install mongodb-mongosh -y
+
+if [ $? -ne 0 ]; then
+    echo "ERROR:: installing mongodb-mongosh is FAILURE"
+     exit 2 #failur is other than 0
+else
+ echo "ERROR:: installing mongodb-mongosh is SUCCESS"
+ #here it will automatically consider 0 as exit code
+fi
