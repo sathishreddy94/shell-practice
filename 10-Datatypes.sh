@@ -22,6 +22,7 @@ echo "First leader: ${LEADERS[0]}"
 echo "Second leader: ${LEADERS[1]}"
 echo "Third leader: ${LEADERS[2]}"
 echo "Fourth leader: ${LEADERS[3]}"
+echo "fifth leader: ${LEADERS[4]}"
 
 
 echo "All leaders: ${LEADERS[@]}"
