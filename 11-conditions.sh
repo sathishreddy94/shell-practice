@@ -1,0 +1,12 @@
+#!/bin/bash
+
+NUMBER=$1
+
+if [ number -lt 10 ]; then
+
+echo "give number is $NUMBER is less than 10"
+
+else 
+echo "give number is $NUMBER is more than/greater than 10"
+
+fi
