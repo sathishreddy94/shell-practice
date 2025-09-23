@@ -18,3 +18,11 @@ echo "All leaders: ${LEADERS}[@]"
 
 echo "All leaders: ${LEADERS}[*]"
 
+echo "First leader: ${LEADERS}[0]"
+
+echo "second leader: ${LEADERS}[1]"
+
+echo "third leader: ${LEADERS}[2]"
+
+echo "fourth leader: ${LEADERS}[3]"
+
