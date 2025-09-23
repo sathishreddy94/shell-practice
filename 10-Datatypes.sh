@@ -14,5 +14,7 @@ echo "sum of 2 numbers is : ${SUM}"
 
 LEADERS=("modi","trump","putin")
 
-echo "All leaders: ${LEADERS}[]"
+echo "All leaders: ${LEADERS}[@]"
+
+echo "All leaders: ${LEADERS}[*]"
 
