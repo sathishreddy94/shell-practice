@@ -9,12 +9,15 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then
     echo "ERROR:: run this script with root user access/previlige"
+    exit 1 #failur is other than 0
 fi
 
 dnf install mysql -d
 
 if [ $? -ne 0 ]; then
     echo "ERROR:: installing mysql is FAILURE"
+     exit 2 #failur is other than 0
 else
  echo "ERROR:: installing mysql is SUCCESS"
+ #here it will automatically consider 0 as exit code
 fi
