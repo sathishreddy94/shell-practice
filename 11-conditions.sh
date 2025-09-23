@@ -2,7 +2,7 @@
 
 NUMBER=$1
 
-if [ number -lt 10 ]; then
+if [ $NUMBER -lt 10 ]; then
 
 echo "give number is $NUMBER is less than 10"
 
