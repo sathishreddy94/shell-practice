@@ -20,7 +20,7 @@ if [ $1 -ne 0 ]; then
     echo "ERROR:: installing $2 is FAILURE"
     exit 2 #failur is other than 0
 else
-    echo "ERROR:: installing $2 is SUCCESS"
+    echo "Installing $2 is SUCCESS"
  #here it will automatically consider 0 as exit code
 fi
 
@@ -34,5 +34,5 @@ dnf install nginx -y
 VALIDATE $? "NGINX"
 
 
-dnf install mongodb-mongosh -y
-VALIDATE $? "mongosh"
+dnf install python3 -y
+VALIDATE $? "python3"
