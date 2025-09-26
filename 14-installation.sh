@@ -13,7 +13,7 @@ Y="\e[33m"
 N="\e[0m"
 
 if [ $USERID -ne 0 ]; then
-    echo -e "$R ERROR:: run this script with root user access/previlige"
+    echo -e "$R ERROR:: run this script with root user access/previlige $N"
     exit 1 #failur is other than 0
 fi
 
@@ -22,10 +22,10 @@ fi
 
 VALIDATE(){
 if [ $1 -ne 0 ]; then
-    echo -e "$R ERROR:: installing $2 is FAILURE"
+    echo -e "$R ERROR:: installing $2 is FAILURE $N"
     exit 2 #failur is other than 0
 else
-    echo -e "$G Installing $2 is SUCCESS"
+    echo -e "$G Installing $2 is SUCCESS $N"
  #here it will automatically consider 0 as exit code
 fi
 
