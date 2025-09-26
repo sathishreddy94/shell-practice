@@ -12,12 +12,30 @@ if [ $USERID -ne 0 ]; then
     exit 1 #failur is other than 0
 fi
 
-dnf install mysql -d
+#For repeated code we are using this
+#when code execution starts from top it wont execute automatically, someone should call them
 
-if [ $? -ne 0 ]; then
-    echo "ERROR:: installing mysql is FAILURE"
+VALIDATE(){
+if [ $1 -ne 0 ]; then
+    echo "ERROR:: installing $2 is FAILURE"
      exit 2 #failur is other than 0
 else
- echo "ERROR:: installing mysql is SUCCESS"
+ echo "ERROR:: installing $2 is SUCCESS"
  #here it will automatically consider 0 as exit code
 fi
+}
+
+dnf install mysql -d    
+
+VALIDATE $? "MYSQL"
+
+
+dnf install nginx -d
+
+VALIDATE $? "NGINX"
+
+
+
+dnf install mongodb-mongosh -y
+
+VALIDATE $? "mongosh"
